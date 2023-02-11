@@ -1,0 +1,11 @@
+﻿  Assignment1.cpp
+C:\Users\cetmo\source\repos\Assignment1\Assignment1\Assignment1.cpp(23,22): warning C4305: 'initializing': truncation from 'double' to 'float'
+C:\Users\cetmo\source\repos\Assignment1\Assignment1\Assignment1.cpp(24,22): warning C4305: 'initializing': truncation from 'double' to 'float'
+C:\Users\cetmo\source\repos\Assignment1\Assignment1\Assignment1.cpp(26,79): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\cetmo\source\repos\Assignment1\Assignment1\Assignment1.cpp(186,43): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\cetmo\source\repos\Assignment1\Assignment1\Assignment1.cpp(232,27): warning C4305: 'initializing': truncation from 'double' to 'float'
+C:\Users\cetmo\source\repos\Assignment1\Assignment1\Assignment1.cpp(239,83): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\cetmo\source\repos\Assignment1\Assignment1\Assignment1.cpp(239,36): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\cetmo\source\repos\Assignment1\Assignment1\Assignment1.cpp(240,68): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\cetmo\source\repos\Assignment1\Assignment1\Assignment1.cpp(240,31): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+  Assignment1.vcxproj -> C:\Users\cetmo\source\repos\Assignment1\x64\Debug\Assignment1.exe

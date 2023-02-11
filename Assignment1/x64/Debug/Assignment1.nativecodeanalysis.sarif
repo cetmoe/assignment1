@@ -1,0 +1,83 @@
+{
+  "version": "2.1.0",
+  "$schema": "https://schemastore.azurewebsites.net/schemas/json/sarif-2.1.0-rtm.5.json",
+  "runs": [
+    {
+      "results": [],
+      "tool": {
+        "driver": {
+          "name": "PREfast",
+          "fullName": "PREfast Code Analysis",
+          "version": "14.34.31937.0",
+          "informationUri": "https://aka.ms/cpp/ca"
+        }
+      },
+      "invocations": [
+        {
+          "executionSuccessful": true
+        }
+      ],
+      "artifacts": [
+        {
+          "location": {
+            "uri": "file:///c:/users/cetmo/source/repos/assignment1/assignment1/assignment1.cpp"
+          },
+          "roles": [
+            "analysisTarget"
+          ],
+          "hashes": {
+            "sha-256": "684b27987dd1910c94c09bc03bb405e04778f84ceccb9d9f28e1364416231cbe"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/cetmo/source/repos/assignment1/assignment1/framework.h"
+          },
+          "hashes": {
+            "sha-256": "4afdded82fbf3d4822d743ea3c3167e11c9fb84591759b871761f4a27e761d77"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/cetmo/source/repos/assignment1/assignment1/targetver.h"
+          },
+          "hashes": {
+            "sha-256": "98488711a351764d005e8c3d3fd40aaed28396870a660c28abd81ac2a53d4b90"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/cetmo/source/repos/assignment1/assignment1/assignment1.h"
+          },
+          "hashes": {
+            "sha-256": "bb2d16be8124f454672798ea453d80e2b16e09d81d345ce06162a5bdfa4212f6"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/cetmo/source/repos/assignment1/assignment1/resource.h"
+          },
+          "hashes": {
+            "sha-256": "49490d8888f5836512f49ad5d1530cd99e94404e6712a1b5edde8640258a74bb"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/cetmo/source/repos/assignment1/assignment1/trafficlight.h"
+          },
+          "hashes": {
+            "sha-256": "ad24e085586da176854c049b779545ca01a22ab36f6db0ecbda4488a17f07efb"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/cetmo/source/repos/assignment1/assignment1/car.h"
+          },
+          "hashes": {
+            "sha-256": "0209a76a46e7511b92e7a743921f797174ece2361b36070418fcfd480cf4e6ca"
+          }
+        }
+      ]
+    }
+  ]
+}
