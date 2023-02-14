@@ -20,9 +20,6 @@ const int SWITCH_TRAFFIC_LIGHT = 100;
 const int MOVE_CAR = 200;
 const int ADD_CAR = 300;
 
-const float pw = 0.15;
-const float pn = 0.15;
-
 TrafficController trafficController = TrafficController(0.45, 0.45, 0.55, 0.55);
 
 
@@ -123,8 +120,8 @@ BOOL InitInstance(HINSTANCE hInstance, int nCmdShow)
 	RECT client;
 	GetClientRect(hWnd, &client);
 
-	trafficController.addLight(0, 20, 20, true);
-	trafficController.addLight(2, 95, 20, false);
+	trafficController.addLight(0, 20, 40, true);
+	trafficController.addLight(2, 95, 40, false);
 
 	SetTimer(hWnd, SWITCH_TRAFFIC_LIGHT, 1000, (TIMERPROC) NULL);
 	SetTimer(hWnd, MOVE_CAR, 6, (TIMERPROC) NULL);
@@ -167,8 +164,19 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
 			switch (wParam)
 			{
 				case VK_LEFT:
-					trafficController.progressLights();
+					trafficController.setCarFlow(-0.1, true);
+					break;
+				case VK_RIGHT:
+					trafficController.setCarFlow(0.1, true);
+					break;
+				case VK_UP:
+					trafficController.setCarFlow(0.1, false);
+					break;
+				case VK_DOWN:
+					trafficController.setCarFlow(-0.1, false);
+					break;
 			}
+			break;
 		}
 		break;
 		case WM_TIMER:
@@ -189,11 +197,11 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
 				break;
 				case ADD_CAR:
 				{
-					if ((float) (rand() % 100) / 100 <= pw)
+					if ((float) (rand() % 100) / 100 < trafficController.getProbability(true))
 					{
 						trafficController.addCar(true);
 					}
-					if ((float) (rand() % 100) / 100 <= pn)
+					if ((float) (rand() % 100) / 100 < trafficController.getProbability(false))
 					{
 						trafficController.addCar(false);
 					}

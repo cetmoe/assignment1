@@ -4,8 +4,6 @@ class TrafficLight
 {
 private:
 	int state;
-	int x;
-	int y;
 	bool horizontal;
 
 	int RED = 0;
@@ -20,6 +18,9 @@ private:
 	};
 
 public:
+	int x;
+	int y;
+
 	TrafficLight(int _state, int _x, int _y, bool _horizontal);
 
 	int getState();

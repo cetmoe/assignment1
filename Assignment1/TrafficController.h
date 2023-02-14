@@ -14,6 +14,9 @@ private:
 	float right = 0;
 	float bottom = 0;
 
+	float pw = 0;
+	float pn = 0;
+
 	int cycleState = 0;
 	int cycleProgress = 0;
 
@@ -34,6 +37,9 @@ public:
 	bool withinStoppingBounds(Car car);
 
 	void cycle();
+
+	void setCarFlow(float change, bool horizontal);
+	float getProbability(bool horizontal);
 
 	void progressLights();
 	void progressCars(float amount);

@@ -81,6 +81,30 @@ TrafficLight TrafficController::findLight(Car car)
 	}
 }
 
+void TrafficController::setCarFlow(float change, bool horizontal)
+{
+	if (horizontal)
+	{
+		pw = pw + change;
+	}
+	else
+	{
+		pn = pn + change;
+	}
+}
+
+float TrafficController::getProbability(bool horizontal)
+{
+	if (horizontal)
+	{
+		return pw;
+	}
+	else
+	{
+		return pn;
+	}
+}
+
 bool TrafficController::withinBounds(Car car)
 {
 	if ((car.getProgress() >= left && car.getProgress() <= right)
@@ -146,6 +170,8 @@ void TrafficController::draw(HWND hWnd, HDC hdc)
 	for (auto& light : trafficLights)
 	{
 		light.draw(hdc);
+		wstring probability = std::to_wstring(getProbability(light.isHorizontal()));
+		TextOut(hdc, light.x, light.y - 20, probability.c_str(), wcslen(probability.c_str()));
 	}
 	for (auto& car : cars)
 	{
